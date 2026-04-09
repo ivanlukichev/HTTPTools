@@ -1,37 +1,67 @@
-# HTTPTools
+<h1 align="center">HTTPTools</h1>
 
-HTTPTools is a lightweight collection of everyday web utilities for developers, SEO specialists, and technical users.
+<p align="center">
+  Small browser utilities for checking headers, redirects, status codes, and everyday HTTP behavior without local setup.
+</p>
 
-🌐 Website  
-https://httptools.net
+<p align="center">
+  <a href="https://httptools.net/"><strong>Open Tools</strong></a>
+  ·
+  <a href="https://github.com/ivanlukichev/HTTPTools"><strong>GitHub Repo</strong></a>
+  ·
+  <a href="https://github.com/ivanlukichev"><strong>More Projects</strong></a>
+</p>
 
-## About
+<p align="center">
+  <a href="https://httptools.net/">
+    <img src="assets/preview.svg" alt="HTTPTools preview" width="900">
+  </a>
+</p>
 
-HTTPTools provides small and practical tools that help inspect, test, and analyze HTTP-related data.
+## What It Is
 
-The goal of the project is to offer fast browser-based utilities that developers and web professionals can use daily without installing additional software.
+HTTPTools is a collection of focused utilities for quick technical checks around requests, responses, headers, and redirect behavior. It is designed for developers, SEO specialists, and anyone who needs a fast answer without opening a full desktop toolchain.
 
-## Use Cases
+This public repository is the lightweight GitHub face of the project: one page that explains the product and links directly to the live utility hub.
 
-- Inspect HTTP headers
-- Test redirects
-- Analyze response codes
-- Debug API responses
-- Quick URL and request checks
+## Typical Uses
 
-These tools are designed for quick checks during development, debugging, or SEO analysis.
+- inspect response headers
+- check redirect chains
+- review status codes
+- validate URLs during debugging
+- run quick technical checks for SEO work
 
-## Philosophy
+## Why It Feels Different
 
-HTTPTools follows a simple idea:
+- Each tool is scoped to a practical daily task.
+- The site removes setup friction for simple technical checks.
+- It serves both developer workflows and SEO workflows.
+- The public repo is structured to be understandable at a glance.
 
-Small utilities that solve one technical problem quickly.
+## Project Snapshot
 
-No accounts, no setup — just open the tool and use it.
+- Category: web and HTTP utilities
+- Audience: developers, SEO specialists, technical users
+- Stack: static front end
+- Product goal: quick answers for common protocol-level questions
 
-## Author
+## More Projects
 
-Created by **Ivan Lukichev**
+| Project | Live site | Public repo |
+| --- | --- | --- |
+| PickWinner | [pickwinner.tools](https://pickwinner.tools/) | [pickwinner](https://github.com/ivanlukichev/pickwinner) |
+| PickHeadphones | [pickheadphones.com](https://pickheadphones.com/) | [PickHeadphones](https://github.com/ivanlukichev/PickHeadphones) |
+| CalcSprint | [calcsprint.com](https://calcsprint.com/) | [CalcSprint](https://github.com/ivanlukichev/CalcSprint) |
+| Number Hunt | [numberhuntgame.com](https://numberhuntgame.com/) | [numberhuntgame](https://github.com/ivanlukichev/numberhuntgame) |
+| PlayMathPuzzles | [playmathpuzzles.com](https://playmathpuzzles.com/) | [PlayMathPuzzles](https://github.com/ivanlukichev/PlayMathPuzzles) |
+| Sudoku Play | [sudoku-play.org](https://sudoku-play.org/) | [Sudoku-Play](https://github.com/ivanlukichev/Sudoku-Play) |
+| SkillSudoku | [skillsudoku.com](https://skillsudoku.com/) | [skillsudoku_public](https://github.com/ivanlukichev/skillsudoku_public) |
+| BlockPlay | [blockplaygame.com](https://blockplaygame.com/) | [BlockPlay-Game](https://github.com/ivanlukichev/BlockPlay-Game) |
 
-More projects:  
-https://lukichev.biz/
+## Visit
+
+<p>
+  <a href="https://httptools.net/"><strong>Open HTTPTools</strong></a><br>
+  Small web utilities for fast HTTP checks and technical debugging.
+</p>

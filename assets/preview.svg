@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="HTTPTools preview">
+  <rect width="1200" height="630" fill="#0f141a"/>
+  <circle cx="1020" cy="120" r="170" fill="#37d0c9" opacity="0.15"/>
+  <circle cx="170" cy="520" r="220" fill="#6aa9ff" opacity="0.12"/>
+  <rect x="84" y="86" width="1032" height="458" rx="34" fill="#151d24" stroke="#2e4656" stroke-width="2"/>
+  <text x="120" y="160" fill="#37d0c9" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="2">HTTP AND WEB UTILITIES</text>
+  <text x="120" y="252" fill="#ffffff" font-family="Arial, sans-serif" font-size="72" font-weight="700">HTTPTools</text>
+  <text x="120" y="310" fill="#d6e2ea" font-family="Arial, sans-serif" font-size="28">Check redirects, headers, and protocol details in seconds.</text>
+  <rect x="120" y="366" width="176" height="52" rx="26" fill="#37d0c9"/>
+  <text x="208" y="400" text-anchor="middle" fill="#0f141a" font-family="Arial, sans-serif" font-size="24" font-weight="700">Open tools</text>
+  <g transform="translate(742 148)">
+    <rect width="288" height="268" rx="28" fill="#0f171d" stroke="#3a5668"/>
+    <text x="28" y="72" fill="#61f2de" font-family="Menlo, monospace" font-size="24">HTTP/1.1 301</text>
+    <text x="28" y="118" fill="#dce7ef" font-family="Menlo, monospace" font-size="21">location: /final-url</text>
+    <text x="28" y="162" fill="#dce7ef" font-family="Menlo, monospace" font-size="21">cache-control: no-cache</text>
+    <text x="28" y="206" fill="#dce7ef" font-family="Menlo, monospace" font-size="21">server: edge</text>
+  </g>
+  <text x="120" y="492" fill="#89a3b3" font-family="Arial, sans-serif" font-size="22">Live at httptools.net</text>
+</svg>
