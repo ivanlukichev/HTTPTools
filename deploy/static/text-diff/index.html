@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Compare Two Texts — Online Text Diff Tool</title>
+    <meta name="description" content="Compare two texts or code snippets and highlight differences instantly in your browser.">
+    <link rel="canonical" href="https://httptools.net/text-diff/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Compare Two Texts — Online Text Diff Tool">
+    <meta property="og:description" content="Compare two texts or code snippets and highlight differences instantly in your browser.">
+    <meta property="og:url" content="https://httptools.net/text-diff/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Compare Two Texts — Online Text Diff Tool">
+    <meta name="twitter:description" content="Compare two texts or code snippets and highlight differences instantly in your browser.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#tools">Tools</a>
+              <span>/</span>
+              <span>Compare Two Texts</span>
+            </nav>
+            <h1>Compare Two Texts</h1>
+            <p>This tool compares two pieces of text and highlights the differences between them. It can be used for code comparison, text editing, debugging and content review.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card" data-text-diff-tool>
+                <div class="form-grid">
+                  <div class="split-grid">
+                    <div>
+                      <label for="text-diff-input-a">Text A</label>
+                      <textarea class="textarea" id="text-diff-input-a" placeholder="Paste the first text here..."></textarea>
+                      <p class="field-hint" id="text-diff-input-a-hint">Current size: 0 characters, 0 lines. Maximum input size: 200000 characters and 100000 lines.</p>
+                    </div>
+                    <div>
+                      <label for="text-diff-input-b">Text B</label>
+                      <textarea class="textarea" id="text-diff-input-b" placeholder="Paste the second text here..."></textarea>
+                      <p class="field-hint" id="text-diff-input-b-hint">Current size: 0 characters, 0 lines. Maximum input size: 200000 characters and 100000 lines.</p>
+                    </div>
+                  </div>
+
+                  <div class="checkbox-grid">
+                    <label class="check-option"><input id="text-diff-ignore-whitespace" type="checkbox"> Ignore whitespace</label>
+                    <label class="check-option"><input id="text-diff-ignore-case" type="checkbox"> Ignore case</label>
+                  </div>
+
+                  <div class="button-row">
+                    <button class="button" id="text-diff-compare" type="button">Compare</button>
+                    <button class="button-secondary" id="text-diff-copy" type="button">Copy result</button>
+                    <button class="button-ghost" id="text-diff-clear" type="button">Clear</button>
+                  </div>
+
+                  <div>
+                    <p class="control-label">Diff view</p>
+                    <div class="diff-viewer" id="text-diff-output" data-empty="true" aria-live="polite">
+                      <p class="diff-viewer__empty">Compare two texts to see the line-by-line diff here.</p>
+                    </div>
+                    <p class="field-hint">Added lines are green, removed lines are red, and modified lines are highlighted with inline changes.</p>
+                  </div>
+                </div>
+                <div class="status-message" id="text-diff-status">Paste two texts and compare them locally in your browser.</div>
+              </section>
+
+              <section class="content-card">
+                <h2>How it works</h2>
+                <p>This tool compares two texts line by line and highlights differences such as added, removed or changed content. Modified lines also show character-level changes so edits are easier to scan.</p>
+                <p>It works entirely in your browser and does not upload any data.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>Example A
+
+Text A:
+Solve this puzzle today
+
+Text B:
+Solve this puzzle tomorrow
+
+Result:
+The changed ending is highlighted inside the modified line pair.</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>Can I compare code snippets here?</summary>
+                    <p>Yes. The tool works well for short code fragments, notes, content edits and plain text review.</p>
+                  </details>
+                  <details>
+                    <summary>What do the diff colors mean?</summary>
+                    <p>Green shows additions, red shows removals, and yellow marks lines that changed on both sides.</p>
+                  </details>
+                  <details>
+                    <summary>Is this tool safe?</summary>
+                    <p>Yes. All text stays in your browser and is treated as plain text.</p>
+                  </details>
+                </div>
+              </section>
+
+              <section class="content-card guide-cta">
+                <h2>Learn how this tool is commonly used</h2>
+                <p>Read the practical guide for editing checks, diff workflows and common review tasks.</p>
+                <div class="button-row">
+                  <a class="button" href="/guides/compare-two-texts/">Open guide →</a>
+                </div>
+              </section>
+
+              <section class="content-card">
+                <h2>Related tools</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/line-sorter/">
+                    <h3>Line Sorter</h3>
+                    <p>Clean line-based text before or after comparing changes.</p>
+                  </a>
+                  <a class="related-card" href="/remove-html-tags/">
+                    <h3>Remove HTML Tags</h3>
+                    <p>Strip markup before comparing plain text versions.</p>
+                  </a>
+                  <a class="related-card" href="/word-counter/">
+                    <h3>Word Counter</h3>
+                    <p>Measure the final text after reviewing the differences.</p>
+                  </a>
+                  <a class="related-card" href="/case-converter/">
+                    <h3>Case Converter</h3>
+                    <p>Normalize case before comparing content variants.</p>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Quick note</h2>
+                <p>Use Ignore whitespace or Ignore case when you want to focus on meaningful content changes instead of formatting differences.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

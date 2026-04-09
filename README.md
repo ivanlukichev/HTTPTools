@@ -22,7 +22,25 @@
 
 HTTPTools is a collection of focused utilities for quick technical checks around requests, responses, headers, and redirect behavior. It is designed for developers, SEO specialists, and anyone who needs a fast answer without opening a full desktop toolchain.
 
-This public repository is the lightweight GitHub face of the project: one page that explains the product and links directly to the live utility hub.
+This public repository is the lightweight GitHub face of the project, but it now also includes a curated source snapshot from the active private development repo.
+
+## Included Source Snapshot
+
+This repo now contains real project files, not just a landing README:
+
+- `deploy/static/` with the production website pages and shared assets
+- `deploy/worker/` with the production Cloudflare Worker bundle
+- `src/worker/` with the editable Worker source
+- `scripts/build-deploy.mjs` for syncing and validating the deploy tree
+- `package.json`, `package-lock.json`, and `wrangler.jsonc`
+- `docs/` with audit and public-repo notes
+
+Excluded on purpose:
+
+- `.env*`
+- `.wrangler/`
+- `node_modules/`
+- local-only machine state and caches
 
 ## Typical Uses
 
@@ -43,8 +61,9 @@ This public repository is the lightweight GitHub face of the project: one page t
 
 - Category: web and HTTP utilities
 - Audience: developers, SEO specialists, technical users
-- Stack: static front end
+- Stack: static front end plus a small Cloudflare Worker
 - Product goal: quick answers for common protocol-level questions
+- Repo role: public product page plus safe source snapshot
 
 ## More Projects
 

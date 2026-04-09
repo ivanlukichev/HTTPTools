@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTTP Status Codes — Complete Reference Guide</title>
+    <meta name="description" content="Browse a complete list of HTTP status codes with meanings and explanations.">
+    <link rel="canonical" href="https://httptools.net/http-status-codes/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HTTP Status Codes — Complete Reference Guide">
+    <meta property="og:description" content="Browse a complete list of HTTP status codes with meanings and explanations.">
+    <meta property="og:url" content="https://httptools.net/http-status-codes/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HTTP Status Codes — Complete Reference Guide">
+    <meta name="twitter:description" content="Browse a complete list of HTTP status codes with meanings and explanations.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools">Tools</a>
+            <a href="/http-status-codes/" aria-current="page">Reference</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#reference">Reference</a>
+              <span>/</span>
+              <span>HTTP Status Codes</span>
+            </nav>
+            <h1>HTTP Status Codes</h1>
+            <p>Reference the most common HTTP response codes with short explanations for debugging requests, documenting APIs and reviewing server responses.</p>
+            <p class="lede">Use the jump links to move between response classes and keep a quick lookup nearby while working with APIs.</p>
+            <div class="jump-links" aria-label="Jump links">
+              <a href="#informational">1xx</a>
+              <a href="#success">2xx</a>
+              <a href="#redirection">3xx</a>
+              <a href="#client-errors">4xx</a>
+              <a href="#server-errors">5xx</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card">
+                <h2>HTTP response code table</h2>
+                <div class="table-scroll">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Meaning</th>
+                      </tr>
+                    </thead>
+                    <tbody data-status-table></tbody>
+                  </table>
+                </div>
+              </section>
+
+              <section class="content-card" id="informational">
+                <h2>1xx Informational</h2>
+                <p>Informational responses indicate that the request was received and processing can continue.</p>
+              </section>
+              <section class="content-card" id="success">
+                <h2>2xx Success</h2>
+                <p>Success responses indicate the request was received, understood and accepted.</p>
+              </section>
+              <section class="content-card" id="redirection">
+                <h2>3xx Redirection</h2>
+                <p>Redirection responses tell the client that additional action is needed to complete the request.</p>
+              </section>
+              <section class="content-card" id="client-errors">
+                <h2>4xx Client Errors</h2>
+                <p>Client error responses indicate a problem with the request itself, authentication or permissions.</p>
+              </section>
+              <section class="content-card" id="server-errors">
+                <h2>5xx Server Errors</h2>
+                <p>Server error responses indicate the server failed while trying to handle an apparently valid request.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>200 OK
+404 Not Found
+503 Service Unavailable</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>What is HTTP 404?</summary>
+                    <p>HTTP 404 means the requested resource could not be found at the specified URL.</p>
+                  </details>
+                  <details>
+                    <summary>What is the difference between 301 and 302?</summary>
+                    <p>A 301 redirect is intended as permanent, while 302 usually signals a temporary move.</p>
+                  </details>
+                  <details>
+                    <summary>What does 503 mean?</summary>
+                    <p>HTTP 503 means the service is temporarily unavailable, often because of maintenance or overload.</p>
+                  </details>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Related pages</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/ascii-table/">
+                    <h3>ASCII Table</h3>
+                    <p>Reference byte-level characters and hex values while debugging protocol output.</p>
+                  </a>
+                  <a class="related-card" href="/epoch-converter/">
+                    <h3>Epoch Converter</h3>
+                    <p>Convert timestamps you find in logs while tracing API behavior.</p>
+                  </a>
+                </div>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

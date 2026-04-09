@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTTPTools — Simple Online Tools for Developers</title>
+    <meta name="description" content="Fast, privacy-friendly browser-based tools for developers and everyday tasks. Convert timestamps, format JSON, encode Base64 and more.">
+    <link rel="canonical" href="https://httptools.net/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HTTPTools — Simple Online Tools for Developers">
+    <meta property="og:description" content="Fast, privacy-friendly browser-based tools for developers and everyday tasks. Convert timestamps, format JSON, encode Base64 and more.">
+    <meta property="og:url" content="https://httptools.net/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="HTTPTools — Simple Online Tools for Developers">
+    <meta name="twitter:description" content="Fast, privacy-friendly browser-based tools for developers and everyday tasks. Convert timestamps, format JSON, encode Base64 and more.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/#reference">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="container">
+            <div class="hero__panel">
+              <div class="hero__eyebrow">Browser-based tools. No server-side processing.</div>
+              <h1>HTTPTools</h1>
+              <p>Simple online tools for developers and everyday tasks. Fast, privacy-friendly and free.</p>
+              <div class="hero-widget" aria-label="Current Unix timestamp" data-home-timestamp>
+                <div class="hero-widget__intro">
+                  <p class="hero-widget__label">Current Unix Timestamp</p>
+                  <p class="field-hint">Real-time Unix timestamp updated every second.</p>
+                </div>
+                <div class="hero-widget__main">
+                  <div class="hero-widget__value" id="home-current-timestamp-seconds">0</div>
+                  <button class="button-secondary hero-widget__copy" id="home-timestamp-copy" type="button">Copy</button>
+                </div>
+                <dl class="compact-info-list">
+                  <div class="compact-info-row">
+                    <dt>Milliseconds</dt>
+                    <dd id="home-current-timestamp-milliseconds">0</dd>
+                  </div>
+                  <div class="compact-info-row">
+                    <dt>UTC</dt>
+                    <dd id="home-current-timestamp-utc">Thu, 01 Jan 1970 00:00:00 GMT</dd>
+                  </div>
+                  <div class="compact-info-row">
+                    <dt>Local</dt>
+                    <dd id="home-current-timestamp-local">Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)</dd>
+                  </div>
+                  <div class="compact-info-row">
+                    <dt>ISO</dt>
+                    <dd id="home-current-timestamp-iso">1970-01-01T00:00:00.000Z</dd>
+                  </div>
+                </dl>
+                <a class="hero-widget__link" href="/epoch-converter/">Open full Epoch Converter →</a>
+              </div>
+              <div class="badge-row" aria-label="Site highlights">
+                <span class="badge">Private by default</span>
+                <span class="badge">No uploads</span>
+                <span class="badge">Fast tools</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="tools">
+          <div class="container">
+            <div class="section-heading">
+              <div>
+                <span class="section-label">Catalog</span>
+                <h2>Developer tools, grouped by task</h2>
+              </div>
+              <p class="section-intro">Browse practical tools for timestamps, text cleanup, encoding, JSON work and quick references.</p>
+            </div>
+
+            <div class="stack">
+              <section class="section-card" aria-labelledby="time-tools-title">
+                <div class="section-heading">
+                  <div>
+                    <span class="section-label">Time Tools</span>
+                    <h2 id="time-tools-title">Unix time and readable dates</h2>
+                  </div>
+                  <p class="section-intro">Quick converters and calculators for Unix timestamps, date math, working days, durations and time zones.</p>
+                </div>
+                <div class="card-grid">
+                  <article class="tool-card">
+                    <div class="tool-card__icon">TS</div>
+                    <div class="tool-card__meta">
+                      <h3>Epoch Converter</h3>
+                      <p>Convert Unix timestamps to human-readable dates and back.</p>
+                    </div>
+                    <a class="card-link" href="/epoch-converter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">TD</div>
+                    <div class="tool-card__meta">
+                      <h3>Timestamp to Date</h3>
+                      <p>Quickly convert timestamps into a readable date.</p>
+                    </div>
+                    <a class="card-link" href="/timestamp-to-date/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">D+</div>
+                    <div class="tool-card__meta">
+                      <h3>Date Calculator</h3>
+                      <p>Calculate days between dates or find a date after N days.</p>
+                    </div>
+                    <a class="card-link" href="/date-calculator/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">BD</div>
+                    <div class="tool-card__meta">
+                      <h3>Business Days Calculator</h3>
+                      <p>Count working days between dates or find a future date after N business days.</p>
+                    </div>
+                    <a class="card-link" href="/business-days-calculator/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">AGE</div>
+                    <div class="tool-card__meta">
+                      <h3>Age Calculator</h3>
+                      <p>Calculate age in years, months and days plus the next birthday.</p>
+                    </div>
+                    <a class="card-link" href="/age-calculator/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">⏱</div>
+                    <div class="tool-card__meta">
+                      <h3>Time Duration Calculator</h3>
+                      <p>Calculate hours and minutes between times or full date-time ranges.</p>
+                    </div>
+                    <a class="card-link" href="/time-duration-calculator/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">TZ</div>
+                    <div class="tool-card__meta">
+                      <h3>Timezone Converter</h3>
+                      <p>Convert time between different time zones directly in your browser.</p>
+                    </div>
+                    <a class="card-link" href="/timezone-converter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">DOY</div>
+                    <div class="tool-card__meta">
+                      <h3>Day of Year</h3>
+                      <p>Find the day number of any date and days left in the year.</p>
+                    </div>
+                    <a class="card-link" href="/day-of-year/">Open Tool →</a>
+                  </article>
+                </div>
+              </section>
+
+              <section class="section-card" aria-labelledby="encoding-tools-title">
+                <div class="section-heading">
+                  <div>
+                    <span class="section-label">Encoding Tools</span>
+                    <h2 id="encoding-tools-title">Base64 and URL-safe text transforms</h2>
+                  </div>
+                  <p class="section-intro">Useful encoders and decoders for text you work with every day.</p>
+                </div>
+                <div class="card-grid">
+                  <article class="tool-card">
+                    <div class="tool-card__icon">64</div>
+                    <div class="tool-card__meta">
+                      <h3>Base64 Encode / Decode</h3>
+                      <p>Convert text to Base64 or decode Base64 strings instantly.</p>
+                    </div>
+                    <a class="card-link" href="/base64-encode/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">%</div>
+                    <div class="tool-card__meta">
+                      <h3>URL Encode / Decode</h3>
+                      <p>Encode special characters for URLs or decode them safely.</p>
+                    </div>
+                    <a class="card-link" href="/url-encode/">Open Tool →</a>
+                  </article>
+                </div>
+              </section>
+
+              <section class="section-card" aria-labelledby="text-tools-title">
+                <div class="section-heading">
+                  <div>
+                    <span class="section-label">Text Tools</span>
+                    <h2 id="text-tools-title">Clean up pasted content and plain text</h2>
+                  </div>
+                  <p class="section-intro">Useful for cleaning pasted content, comparing text, converting lists, expanding templates and turning formatted text into plain text or Markdown.</p>
+                </div>
+                <div class="card-grid">
+                  <article class="tool-card">
+                    <div class="tool-card__icon">TXT</div>
+                    <div class="tool-card__meta">
+                      <h3>Remove HTML Tags</h3>
+                      <p>Remove HTML tags and convert HTML content into clean plain text.</p>
+                    </div>
+                    <a class="card-link" href="/remove-html-tags/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">MD</div>
+                    <div class="tool-card__meta">
+                      <h3>HTML to Markdown</h3>
+                      <p>Convert HTML into clean Markdown directly in your browser.</p>
+                    </div>
+                    <a class="card-link" href="/html-to-markdown/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">.-</div>
+                    <div class="tool-card__meta">
+                      <h3>Morse Code Translator</h3>
+                      <p>Convert text to Morse code and translate Morse back to text instantly.</p>
+                    </div>
+                    <a class="card-link" href="/morse-code/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">{|}</div>
+                    <div class="tool-card__meta">
+                      <h3>Spintax Expander</h3>
+                      <p>Generate text variations from templates with {a|b} or [a|b] syntax.</p>
+                    </div>
+                    <a class="card-link" href="/spintax-expander/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">W</div>
+                    <div class="tool-card__meta">
+                      <h3>Word Counter</h3>
+                      <p>Count words, characters, lines and paragraphs instantly.</p>
+                    </div>
+                    <a class="card-link" href="/word-counter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">Aa</div>
+                    <div class="tool-card__meta">
+                      <h3>Case Converter</h3>
+                      <p>Convert text to upper, lower, title, camel, snake or kebab case.</p>
+                    </div>
+                    <a class="card-link" href="/case-converter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">↕</div>
+                    <div class="tool-card__meta">
+                      <h3>Line Sorter</h3>
+                      <p>Sort lines alphabetically, clean text and remove duplicates.</p>
+                    </div>
+                    <a class="card-link" href="/line-sorter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">,↔</div>
+                    <div class="tool-card__meta">
+                      <h3>List Converter</h3>
+                      <p>Split or join lists using commas, semicolons or custom delimiters.</p>
+                    </div>
+                    <a class="card-link" href="/list-converter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">≠</div>
+                    <div class="tool-card__meta">
+                      <h3>Compare Two Texts</h3>
+                      <p>Compare two texts and highlight differences.</p>
+                    </div>
+                    <a class="card-link" href="/text-diff/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">≬</div>
+                    <div class="tool-card__meta">
+                      <h3>Compare Two Lists</h3>
+                      <p>Compare two lists and find common or unique items.</p>
+                    </div>
+                    <a class="card-link" href="/list-compare/">Open Tool →</a>
+                  </article>
+                </div>
+              </section>
+
+              <section class="section-card" aria-labelledby="data-tools-title">
+                <div class="section-heading">
+                  <div>
+                    <span class="section-label">Data Tools</span>
+                    <h2 id="data-tools-title">Formatting, passwords and identifiers</h2>
+                  </div>
+                  <p class="section-intro">Format JSON, generate numbers and passwords, and create UUIDs without sending data anywhere.</p>
+                </div>
+                <div class="card-grid">
+                  <article class="tool-card">
+                    <div class="tool-card__icon">{ }</div>
+                    <div class="tool-card__meta">
+                      <h3>JSON Formatter</h3>
+                      <p>Beautify and validate JSON instantly.</p>
+                    </div>
+                    <a class="card-link" href="/json-formatter/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">PW</div>
+                    <div class="tool-card__meta">
+                      <h3>Password Generator</h3>
+                      <p>Generate secure random passwords, memorable passphrases and PIN codes instantly.</p>
+                    </div>
+                    <a class="card-link" href="/password-generator/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">123</div>
+                    <div class="tool-card__meta">
+                      <h3>Number Generator</h3>
+                      <p>Generate number sequences or random number lists instantly.</p>
+                    </div>
+                    <a class="card-link" href="/number-generator/">Open Tool →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">ID</div>
+                    <div class="tool-card__meta">
+                      <h3>UUID Generator</h3>
+                      <p>Generate random UUID v4 identifiers.</p>
+                    </div>
+                    <a class="card-link" href="/uuid-generator/">Open Tool →</a>
+                  </article>
+                </div>
+              </section>
+
+              <section class="section-card" id="reference" aria-labelledby="reference-title">
+                <div class="section-heading">
+                  <div>
+                    <span class="section-label">Reference</span>
+                    <h2 id="reference-title">Fast lookup pages for common web work</h2>
+                  </div>
+                  <p class="section-intro">Useful reference material with readable tables and clean internal linking.</p>
+                </div>
+                <div class="card-grid">
+                  <article class="tool-card">
+                    <div class="tool-card__icon">4xx</div>
+                    <div class="tool-card__meta">
+                      <h3>HTTP Status Codes</h3>
+                      <p>Complete list of HTTP response codes with explanations.</p>
+                    </div>
+                    <a class="card-link" href="/http-status-codes/">Open Page →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">😊</div>
+                    <div class="tool-card__meta">
+                      <h3>Emoji List</h3>
+                      <p>Browse and copy popular emoji symbols for messages, websites and social posts.</p>
+                    </div>
+                    <a class="card-link" href="/emoji/">Open Page →</a>
+                  </article>
+                  <article class="tool-card">
+                    <div class="tool-card__icon">A*</div>
+                    <div class="tool-card__meta">
+                      <h3>ASCII Table</h3>
+                      <p>Full ASCII character table with decimal and hex values.</p>
+                    </div>
+                    <a class="card-link" href="/ascii-table/">Open Page →</a>
+                  </article>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <section class="section-card" aria-labelledby="guides-home-title">
+              <div class="section-heading">
+                <div>
+                  <span class="section-label">Guides</span>
+                  <h2 id="guides-home-title">Practical help around the tools</h2>
+                </div>
+                <p class="section-intro">Short guides explain how the tools are commonly used in real tasks such as timestamps, text comparison, password generation and HTML cleanup.</p>
+              </div>
+              <div class="card-grid">
+                <article class="tool-card">
+                  <div class="tool-card__icon">TS</div>
+                  <div class="tool-card__meta">
+                    <h3>Understanding Unix Timestamps</h3>
+                    <p>Learn where Unix time appears and how to interpret it quickly.</p>
+                  </div>
+                  <a class="card-link" href="/guides/unix-timestamp/">Open guide →</a>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card__icon">PW</div>
+                  <div class="tool-card__meta">
+                    <h3>How to Generate Secure Passwords</h3>
+                    <p>See when to use random passwords, passphrases or PINs.</p>
+                  </div>
+                  <a class="card-link" href="/guides/password-generator/">Open guide →</a>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card__icon">≠</div>
+                  <div class="tool-card__meta">
+                    <h3>How to Compare Two Texts</h3>
+                    <p>Use diff tools more effectively for edits, code and content checks.</p>
+                  </div>
+                  <a class="card-link" href="/guides/compare-two-texts/">Open guide →</a>
+                </article>
+                <article class="tool-card">
+                  <div class="tool-card__icon">→</div>
+                  <div class="tool-card__meta">
+                    <h3>Explore all guides</h3>
+                    <p>Browse the full practical guides section and jump into related tools.</p>
+                  </div>
+                  <a class="card-link" href="/guides/">Open Guides →</a>
+                </article>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="section" id="about">
+          <div class="container">
+            <div class="layout-grid">
+              <section class="content-card">
+                <span class="section-label">About</span>
+                <h2>Simple tools for everyday web work</h2>
+                <p>HTTPTools collects practical utilities and reference pages for common developer tasks such as timestamps, encoding, JSON cleanup and quick lookups.</p>
+                <p>The site is designed to stay fast, clear and easy to browse as more tools are added over time.</p>
+              </section>
+              <aside class="status-card">
+                <h2>What you can expect</h2>
+                <ul class="inline-list" aria-label="Rules">
+                  <li class="badge">No sign-up</li>
+                  <li class="badge">No uploads</li>
+                  <li class="badge">Clear output</li>
+                  <li class="badge">Simple pages</li>
+                  <li class="badge">Quick lookup</li>
+                </ul>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

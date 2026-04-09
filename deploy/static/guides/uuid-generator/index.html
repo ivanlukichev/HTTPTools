@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Is a UUID and When to Use It</title>
+    <meta name="description" content="Learn what a UUID is, why it is useful in APIs and databases, and when random UUIDs make sense in real workflows.">
+    <link rel="canonical" href="https://httptools.net/guides/uuid-generator/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What Is a UUID and When to Use It">
+    <meta property="og:description" content="Learn what a UUID is, why it is useful in APIs and databases, and when random UUIDs make sense in real workflows.">
+    <meta property="og:url" content="https://httptools.net/guides/uuid-generator/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="What Is a UUID and When to Use It">
+    <meta name="twitter:description" content="Learn what a UUID is, why it is useful in APIs and databases, and when random UUIDs make sense in real workflows.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/" aria-current="page">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/guides/">Guides</a>
+              <span>/</span>
+              <span>What Is a UUID and When to Use It</span>
+            </nav>
+            <h1>What Is a UUID and When to Use It</h1>
+            <p>A UUID is a globally unique identifier format commonly used to label records, events, sessions and other entities without relying on a central numeric counter. In practice, it gives you a convenient way to create IDs that are unlikely to collide.</p>
+            <p>This is useful in distributed systems, APIs, queues, databases and test fixtures, especially when IDs may be created in different places without coordination. The identifier does not need to be short. It needs to be stable and unique enough for the workflow.</p>
+            <p>UUIDs are especially common in development because they are easy to generate locally and fit many situations where a database autoincrement value is not available yet.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <section class="content-card">
+              <h2>When this is useful</h2>
+              <ul class="content-list">
+                <li>Creating IDs for test records or mock API payloads.</li>
+                <li>Generating event or job identifiers in distributed workflows.</li>
+                <li>Adding stable IDs to frontend demo data.</li>
+                <li>Preparing sample records before a backend system assigns real IDs.</li>
+              </ul>
+            </section>
+
+            <section class="content-card">
+              <h2>Practical example</h2>
+              <p>If you are building a JSON payload for testing and need a record ID right now, a UUID gives you a realistic-looking unique value without waiting for a database insert. That is helpful in demos, frontend mocks and queue or webhook examples.</p>
+            </section>
+
+            <section class="content-card">
+              <h2>Common use cases</h2>
+              <ul class="content-list">
+                <li>Mocking API resources in development.</li>
+                <li>Creating event IDs for logging or message flows.</li>
+                <li>Assigning identifiers to imported or temporary records.</li>
+                <li>Building sample data sets for QA and documentation.</li>
+                <li>Generating client-side IDs before persistence.</li>
+              </ul>
+            </section>
+
+            <section class="content-card guide-cta">
+              <span class="section-label">Try the tool</span>
+              <h2>Generate UUIDs in your browser</h2>
+              <p>Use the browser-based tool to apply this in seconds.</p>
+              <div class="button-row">
+                <a class="button" href="/uuid-generator/">Open Tool →</a>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>FAQ</h2>
+              <div class="faq-list">
+                <details>
+                  <summary>Why use a UUID instead of a number?</summary>
+                  <p>Because a UUID can be generated independently without coordinating with a central counter.</p>
+                </details>
+                <details>
+                  <summary>Is a UUID guaranteed to be unique?</summary>
+                  <p>No practical identifier format offers an absolute guarantee in every theoretical case, but UUIDs are designed to make collisions extremely unlikely for normal use.</p>
+                </details>
+                <details>
+                  <summary>When should I avoid UUIDs?</summary>
+                  <p>If you need short human-friendly IDs or strictly ordered numeric values, another format may be a better fit.</p>
+                </details>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>Related tools</h2>
+              <div class="related-grid">
+                <a class="related-card" href="/uuid-generator/">
+                  <h3>UUID Generator</h3>
+                  <p>Create UUID v4 values locally in the browser.</p>
+                </a>
+                <a class="related-card" href="/json-formatter/">
+                  <h3>JSON Formatter</h3>
+                  <p>Format payloads after adding IDs to objects or arrays.</p>
+                </a>
+                <a class="related-card" href="/number-generator/">
+                  <h3>Number Generator</h3>
+                  <p>Generate numeric samples when a sequential test value is better than a UUID.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

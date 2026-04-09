@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Understanding Unix Timestamps</title>
+    <meta name="description" content="Learn what Unix timestamps are, where they are used, and how to convert them into readable dates for APIs, logs and exports.">
+    <link rel="canonical" href="https://httptools.net/guides/unix-timestamp/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Understanding Unix Timestamps">
+    <meta property="og:description" content="Learn what Unix timestamps are, where they are used, and how to convert them into readable dates for APIs, logs and exports.">
+    <meta property="og:url" content="https://httptools.net/guides/unix-timestamp/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Understanding Unix Timestamps">
+    <meta name="twitter:description" content="Learn what Unix timestamps are, where they are used, and how to convert them into readable dates for APIs, logs and exports.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/" aria-current="page">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/guides/">Guides</a>
+              <span>/</span>
+              <span>Understanding Unix Timestamps</span>
+            </nav>
+            <h1>Understanding Unix Timestamps</h1>
+            <p>Unix timestamps look simple because they are just numbers, but they show up almost everywhere in web work. APIs, logs, exports, queue messages and analytics tools often store time as seconds or milliseconds since January 1, 1970 UTC.</p>
+            <p>The advantage is consistency. A timestamp is compact, timezone-neutral at the storage level and easy for software to compare, sort or transmit. The downside is that humans cannot read it comfortably without converting it first.</p>
+            <p>That is why timestamp tools stay useful even for experienced developers. You often need to answer quick practical questions: is this value seconds or milliseconds, what date does it represent, and how does it look in UTC versus local time?</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <section class="content-card">
+              <h2>When this is useful</h2>
+              <ul class="content-list">
+                <li>Reviewing API responses that return numeric time fields such as <code>created_at</code> or <code>expires_at</code>.</li>
+                <li>Checking logs where event times are stored as raw Unix values.</li>
+                <li>Debugging timezone questions between a backend service and the browser.</li>
+                <li>Converting a human date into Unix time before testing a request or payload.</li>
+              </ul>
+            </section>
+
+            <section class="content-card">
+              <h2>Practical example</h2>
+              <p>Imagine an API sends <code>1710153600</code> in a JSON payload. At a glance that number does not tell you much, but converting it shows that it maps to a specific UTC date and a local date in your own timezone. That immediately answers whether the value is plausible or off by hours, days or even a thousand-fold scale problem.</p>
+              <p>This is also where milliseconds matter. A value like <code>1710153600000</code> represents the same moment but uses milliseconds instead of seconds. If you treat one as the other, your date will be completely wrong.</p>
+            </section>
+
+            <section class="content-card">
+              <h2>Common use cases</h2>
+              <ul class="content-list">
+                <li>Checking whether a timestamp field in a payload uses seconds or milliseconds.</li>
+                <li>Comparing an event time in UTC with what users see in local time.</li>
+                <li>Creating sample expiration values for tests and demos.</li>
+                <li>Verifying that backend and frontend code are converting the same way.</li>
+                <li>Reading old exported data without opening a separate console or script.</li>
+              </ul>
+            </section>
+
+            <section class="content-card guide-cta">
+              <span class="section-label">Try the tool</span>
+              <h2>Use the browser-based converter</h2>
+              <p>Use the browser-based tool to apply this in seconds.</p>
+              <div class="button-row">
+                <a class="button" href="/epoch-converter/">Open Tool →</a>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>FAQ</h2>
+              <div class="faq-list">
+                <details>
+                  <summary>Why do timestamps use UTC?</summary>
+                  <p>UTC gives software one stable reference point. The readable local version can change by timezone, but the stored timestamp does not.</p>
+                </details>
+                <details>
+                  <summary>Why are some timestamps 10 digits and others 13 digits?</summary>
+                  <p>Ten digits usually means seconds. Thirteen digits usually means milliseconds.</p>
+                </details>
+                <details>
+                  <summary>Do I always need both UTC and local time?</summary>
+                  <p>Usually yes when you are debugging. UTC helps compare systems, while local time helps verify what a person actually saw.</p>
+                </details>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>Related tools</h2>
+              <div class="related-grid">
+                <a class="related-card" href="/epoch-converter/">
+                  <h3>Epoch Converter</h3>
+                  <p>Convert Unix timestamps in both directions with UTC, local time and ISO output.</p>
+                </a>
+                <a class="related-card" href="/timestamp-to-date/">
+                  <h3>Timestamp to Date</h3>
+                  <p>Use a faster one-way converter when you only need readable output.</p>
+                </a>
+                <a class="related-card" href="/number-generator/">
+                  <h3>Number Generator</h3>
+                  <p>Create sample numeric ranges when testing time-based payloads.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

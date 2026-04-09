@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Is Base64 Encoding?</title>
+    <meta name="description" content="Learn what Base64 encoding is, why it appears in APIs and email, and when to encode or decode text safely.">
+    <link rel="canonical" href="https://httptools.net/guides/base64-encoding/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="What Is Base64 Encoding?">
+    <meta property="og:description" content="Learn what Base64 encoding is, why it appears in APIs and email, and when to encode or decode text safely.">
+    <meta property="og:url" content="https://httptools.net/guides/base64-encoding/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="What Is Base64 Encoding?">
+    <meta name="twitter:description" content="Learn what Base64 encoding is, why it appears in APIs and email, and when to encode or decode text safely.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/" aria-current="page">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/guides/">Guides</a>
+              <span>/</span>
+              <span>What Is Base64 Encoding?</span>
+            </nav>
+            <h1>What Is Base64 Encoding?</h1>
+            <p>Base64 is a way to represent binary data as plain text characters. You will see it in email bodies, tokens, data URLs, API payloads and other places where raw bytes need to travel through systems that expect text-friendly content.</p>
+            <p>That does not make Base64 encryption. It is an encoding format. Anyone can decode Base64 data back into the original bytes as long as they have the full encoded string.</p>
+            <p>For everyday work, the practical question is usually simple: why is this field encoded, and how can I safely inspect or transform it without opening a larger toolchain?</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <section class="content-card">
+              <h2>When this is useful</h2>
+              <ul class="content-list">
+                <li>Inspecting API fields that contain Base64-encoded text or bytes.</li>
+                <li>Preparing inline data for demos or small payload examples.</li>
+                <li>Decoding text from a system export or email header.</li>
+                <li>Verifying whether a string is just encoded or actually encrypted.</li>
+              </ul>
+            </section>
+
+            <section class="content-card">
+              <h2>Practical example</h2>
+              <p>If a payload contains <code>SGVsbG8gd29ybGQ=</code>, the value may look opaque, but decoding it reveals a simple human-readable string. That often happens in testing and debugging: the encoded layer is just transport format, not hidden meaning.</p>
+              <p>Encoding also works in the other direction when you need to transform plain text into a Base64 representation for a request, a demo snippet or a simple browser-side check.</p>
+            </section>
+
+            <section class="content-card">
+              <h2>Common use cases</h2>
+              <ul class="content-list">
+                <li>Checking the readable form of a Base64 field in JSON.</li>
+                <li>Turning text into Base64 for a request example.</li>
+                <li>Inspecting small token-like strings during debugging.</li>
+                <li>Working with inline text-based data for prototypes.</li>
+                <li>Confirming that encoding, not encryption, is what a system uses.</li>
+              </ul>
+            </section>
+
+            <section class="content-card guide-cta">
+              <span class="section-label">Try the tool</span>
+              <h2>Encode or decode Base64 in your browser</h2>
+              <p>Use the browser-based tool to apply this in seconds.</p>
+              <div class="button-row">
+                <a class="button" href="/base64-encode/">Open Tool →</a>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>FAQ</h2>
+              <div class="faq-list">
+                <details>
+                  <summary>Is Base64 secure?</summary>
+                  <p>No. It is just an encoding format. It changes representation, not access control.</p>
+                </details>
+                <details>
+                  <summary>Why is Base64 longer than the original text?</summary>
+                  <p>Because the encoding expands the data to fit the character set that Base64 uses.</p>
+                </details>
+                <details>
+                  <summary>When should I decode it?</summary>
+                  <p>Decode it when you need to inspect the human-readable or binary source behind an encoded value.</p>
+                </details>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>Related tools</h2>
+              <div class="related-grid">
+                <a class="related-card" href="/base64-encode/">
+                  <h3>Base64 Encode / Decode</h3>
+                  <p>Convert text to and from Base64 directly in the browser.</p>
+                </a>
+                <a class="related-card" href="/url-encode/">
+                  <h3>URL Encode / Decode</h3>
+                  <p>Use another common text-safe transform for query strings and links.</p>
+                </a>
+                <a class="related-card" href="/remove-html-tags/">
+                  <h3>Remove HTML Tags</h3>
+                  <p>Clean copied text before encoding or after decoding it.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

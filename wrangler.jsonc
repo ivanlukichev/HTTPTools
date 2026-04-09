@@ -1,0 +1,13 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "httptoolsnet",
+  "main": "deploy/worker/index.js",
+  "compatibility_date": "2026-03-11",
+  "assets": {
+    "directory": "deploy/static",
+    "binding": "ASSETS",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  }
+}

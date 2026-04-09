@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Base64 Encode / Decode — Online Browser Tool</title>
+    <meta name="description" content="Encode text to Base64 or decode Base64 strings instantly with this free browser-based tool.">
+    <link rel="canonical" href="https://httptools.net/base64-encode/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Base64 Encode / Decode — Online Browser Tool">
+    <meta property="og:description" content="Encode text to Base64 or decode Base64 strings instantly with this free browser-based tool.">
+    <meta property="og:url" content="https://httptools.net/base64-encode/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Base64 Encode / Decode — Online Browser Tool">
+    <meta name="twitter:description" content="Encode text to Base64 or decode Base64 strings instantly with this free browser-based tool.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#tools">Tools</a>
+              <span>/</span>
+              <span>Base64 Encode / Decode</span>
+            </nav>
+            <h1>Base64 Encode / Decode</h1>
+            <p>Convert plain text to Base64 or decode Base64 back to readable text in a few seconds.</p>
+            <p class="lede">Useful for quick checks of tokens, payload fragments and encoded text.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card" data-base64-tool>
+                <div class="split-grid">
+                  <div>
+                    <label for="base64-input">Input</label>
+                    <textarea class="textarea" id="base64-input"></textarea>
+                    <p class="field-hint">Paste plain text or a Base64 string.</p>
+                  </div>
+                  <div>
+                    <label for="base64-output">Result</label>
+                    <textarea class="textarea" id="base64-output" readonly></textarea>
+                    <p class="field-hint">Result appears here after encoding or decoding.</p>
+                  </div>
+                </div>
+                <div class="button-row button-row-spaced">
+                  <button class="button" id="base64-encode" type="button">Encode</button>
+                  <button class="button-secondary" id="base64-decode" type="button">Decode</button>
+                  <button class="button-secondary" id="base64-copy" type="button">Copy Result</button>
+                  <button class="button-ghost" id="base64-clear" type="button">Clear All</button>
+                </div>
+                <div class="status-message" id="base64-status">Paste text, then choose Encode or Decode.</div>
+              </section>
+
+              <section class="content-card">
+                <h2>About this tool</h2>
+                <p>Base64 is a text encoding that maps binary or plain text content to a restricted set of ASCII characters. It is useful for data transport, embedded content and certain protocol fields, but it is not meant to hide or secure data.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>Hello, world!
+
+SGVsbG8sIHdvcmxkIQ==</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>Is Base64 encryption?</summary>
+                    <p>No. Base64 is just an encoding format. Anyone can decode it back to the original value.</p>
+                  </details>
+                  <details>
+                    <summary>How do I decode Base64?</summary>
+                    <p>Paste the Base64 string into the input area and press Decode. If the input is malformed, the tool shows an error.</p>
+                  </details>
+                  <details>
+                    <summary>Why use Base64?</summary>
+                    <p>It helps move data through systems that expect text-only content or limited character sets.</p>
+                  </details>
+                </div>
+              </section>
+
+              <section class="content-card guide-cta">
+                <h2>Learn how this tool is commonly used</h2>
+                <p>Read the practical guide for common Base64 workflows in APIs, tokens and transport-safe text.</p>
+                <div class="button-row">
+                  <a class="button" href="/guides/base64-encoding/">Open guide →</a>
+                </div>
+              </section>
+
+              <section class="content-card">
+                <h2>Related tools</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/url-encode/">
+                    <h3>URL Encode / Decode</h3>
+                    <p>Encode text for query strings and URL components rather than transport-safe Base64.</p>
+                  </a>
+                  <a class="related-card" href="/json-formatter/">
+                    <h3>JSON Formatter</h3>
+                    <p>Format JSON after decoding payload fragments.</p>
+                  </a>
+                  <a class="related-card" href="/ascii-table/">
+                    <h3>ASCII Table</h3>
+                    <p>Reference character values behind text-based encodings.</p>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Quick note</h2>
+                <p>Use this page for short text checks, payload snippets and quick Base64 conversions.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

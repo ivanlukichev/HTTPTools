@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Generate Secure Passwords</title>
+    <meta name="description" content="Learn what makes a password strong and when to use random passwords, memorable passphrases or PIN-based formats.">
+    <link rel="canonical" href="https://httptools.net/guides/password-generator/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Generate Secure Passwords">
+    <meta property="og:description" content="Learn what makes a password strong and when to use random passwords, memorable passphrases or PIN-based formats.">
+    <meta property="og:url" content="https://httptools.net/guides/password-generator/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="How to Generate Secure Passwords">
+    <meta name="twitter:description" content="Learn what makes a password strong and when to use random passwords, memorable passphrases or PIN-based formats.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/" aria-current="page">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/guides/">Guides</a>
+              <span>/</span>
+              <span>How to Generate Secure Passwords</span>
+            </nav>
+            <h1>How to Generate Secure Passwords</h1>
+            <p>A strong password is hard to guess, hard to reuse accidentally and easy to generate consistently. In practice, that usually means enough length, enough variety and no predictable patterns like names, birthdays or repeated keyboard shapes.</p>
+            <p>Different situations call for different formats. A random password is best when you can rely on a password manager. A memorable passphrase is useful when you may need to type it manually. A PIN is a different case entirely and should only be used where the service expects a numeric code.</p>
+            <p>The important part is not memorizing complex rules. It is choosing the right format for the job and generating it with strong browser randomness instead of inventing something by hand.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <section class="content-card">
+              <h2>When this is useful</h2>
+              <ul class="content-list">
+                <li>Creating a new account password that should be long and unique.</li>
+                <li>Generating temporary credentials for demos, staging systems or test accounts.</li>
+                <li>Making a memorable passphrase for a device or account you type into often.</li>
+                <li>Creating numeric-only PIN codes for systems that do not allow full passwords.</li>
+              </ul>
+            </section>
+
+            <section class="content-card">
+              <h2>Practical example</h2>
+              <p>If a service supports long passwords, a random 16- to 20-character value with uppercase, lowercase, numbers and symbols is usually the strongest simple choice. That works especially well when the password will be stored in a manager and not memorized manually.</p>
+              <p>If you need something easier to read and type, a multi-word passphrase with optional capitalization or a number at the end is often a better fit than inventing a shorter “clever” password yourself.</p>
+            </section>
+
+            <section class="content-card">
+              <h2>Common use cases</h2>
+              <ul class="content-list">
+                <li>Generating a random password for a new login.</li>
+                <li>Creating a passphrase for a household device or shared vault entry.</li>
+                <li>Making demo credentials without exposing real account passwords.</li>
+                <li>Creating a short numeric PIN when a site only supports digits.</li>
+                <li>Refreshing old reused passwords with stronger unique ones.</li>
+              </ul>
+            </section>
+
+            <section class="content-card guide-cta">
+              <span class="section-label">Try the tool</span>
+              <h2>Generate passwords in your browser</h2>
+              <p>Use the browser-based tool to apply this in seconds.</p>
+              <div class="button-row">
+                <a class="button" href="/password-generator/">Open Tool →</a>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>FAQ</h2>
+              <div class="faq-list">
+                <details>
+                  <summary>What usually matters more, length or symbols?</summary>
+                  <p>Length matters most in most cases. Variety helps too, but a longer password generally improves security faster than adding one special character.</p>
+                </details>
+                <details>
+                  <summary>When should I use a memorable password?</summary>
+                  <p>Use it when you may need to type the password manually and still want something stronger than a short custom phrase.</p>
+                </details>
+                <details>
+                  <summary>Are browser-based password generators safe?</summary>
+                  <p>They can be, as long as generation happens locally with secure browser randomness and nothing is uploaded.</p>
+                </details>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>Related tools</h2>
+              <div class="related-grid">
+                <a class="related-card" href="/password-generator/">
+                  <h3>Password Generator</h3>
+                  <p>Create random passwords, memorable passphrases and PINs locally in your browser.</p>
+                </a>
+                <a class="related-card" href="/uuid-generator/">
+                  <h3>UUID Generator</h3>
+                  <p>Generate random identifiers for records, sessions and sample data.</p>
+                </a>
+                <a class="related-card" href="/base64-encode/">
+                  <h3>Base64 Encode / Decode</h3>
+                  <p>Useful when you need to inspect or transform token-like strings.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

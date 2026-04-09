@@ -1,0 +1,14 @@
+.DS_Store
+node_modules/
+.wrangler/
+coverage/
+dist/
+logs/
+tmp/
+cache/
+backups/
+*.log
+*.zip
+*.tar
+.dev.vars
+.env*

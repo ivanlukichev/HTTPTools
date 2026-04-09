@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Date Calculator — Days Between Dates and Date After N Days</title>
+    <meta name="description" content="Calculate how many days are between two dates or find the date after a number of days instantly in your browser.">
+    <link rel="canonical" href="https://httptools.net/date-calculator/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Date Calculator — Days Between Dates and Date After N Days">
+    <meta property="og:description" content="Calculate how many days are between two dates or find the date after a number of days instantly in your browser.">
+    <meta property="og:url" content="https://httptools.net/date-calculator/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Date Calculator — Days Between Dates and Date After N Days">
+    <meta name="twitter:description" content="Calculate how many days are between two dates or find the date after a number of days instantly in your browser.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#tools">Tools</a>
+              <span>/</span>
+              <span>Date Calculator</span>
+            </nav>
+            <h1>Date Calculator</h1>
+            <p>Calculate the number of days between two dates or find what date will be after a specific number of days. Useful for planning, deadlines and scheduling.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card" data-date-calculator-tool>
+                <div class="form-grid">
+                  <div>
+                    <p class="control-label">Mode</p>
+                    <div class="mode-tabs" role="tablist" aria-label="Date calculator modes">
+                      <button class="mode-tab" type="button" role="tab" aria-selected="true" data-date-calculator-mode="between">Days between dates</button>
+                      <button class="mode-tab" type="button" role="tab" aria-selected="false" data-date-calculator-mode="until">Days until a date</button>
+                      <button class="mode-tab" type="button" role="tab" aria-selected="false" data-date-calculator-mode="after">Date after N days</button>
+                    </div>
+                  </div>
+
+                  <div data-date-calculator-panel="between">
+                    <div class="split-grid">
+                      <div>
+                        <label for="date-calculator-start-a">Start date</label>
+                        <input class="input" id="date-calculator-start-a" type="date" min="1900-01-01" max="2100-12-31">
+                        <p class="field-hint">Allowed range: 1900–2100.</p>
+                      </div>
+                      <div>
+                        <label for="date-calculator-end-a">End date</label>
+                        <input class="input" id="date-calculator-end-a" type="date" min="1900-01-01" max="2100-12-31">
+                        <p class="field-hint">Allowed range: 1900–2100.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-date-calculator-panel="until" hidden>
+                    <div>
+                      <label for="date-calculator-target-b">Target date</label>
+                      <input class="input" id="date-calculator-target-b" type="date" min="1900-01-01" max="2100-12-31">
+                      <p class="field-hint">Allowed range: 1900–2100.</p>
+                    </div>
+                  </div>
+
+                  <div data-date-calculator-panel="after" hidden>
+                    <div class="split-grid">
+                      <div>
+                        <label for="date-calculator-start-c">Start date</label>
+                        <input class="input" id="date-calculator-start-c" type="date" min="1900-01-01" max="2100-12-31">
+                        <p class="field-hint">Allowed range: 1900–2100.</p>
+                      </div>
+                      <div>
+                        <label for="date-calculator-days-c">Number of days</label>
+                        <input class="input" id="date-calculator-days-c" type="number" inputmode="numeric" step="1" placeholder="30">
+                        <p class="field-hint">Use a whole number. Negative values move backward in time.</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="control-label">Quick buttons</p>
+                      <div class="button-row">
+                        <button class="button-secondary" type="button" data-date-offset="7">+7 days</button>
+                        <button class="button-secondary" type="button" data-date-offset="30">+30 days</button>
+                        <button class="button-secondary" type="button" data-date-offset="90">+90 days</button>
+                        <button class="button-secondary" type="button" data-date-offset="365">+365 days</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h2>Result</h2>
+                    <pre class="result-panel" id="date-calculator-result" data-empty="true">Result will appear here.</pre>
+                    <div class="button-row">
+                      <button class="button-secondary" id="date-calculator-copy" type="button">Copy result</button>
+                      <button class="button-ghost" id="date-calculator-clear" type="button">Clear</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="status-message" id="date-calculator-status">Choose a mode and enter valid dates to calculate locally in your browser.</div>
+              </section>
+
+              <section class="content-card">
+                <h2>How it works</h2>
+                <p>This tool calculates the difference between dates or determines a future date based on a number of days. All calculations happen locally in your browser.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>Start date:
+2026-01-01
+
+End date:
+2026-01-10
+
+Output:
+Days between dates: 9 days</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>Does this count full calendar days?</summary>
+                    <p>Yes. The tool compares calendar dates, so the result stays stable without timezone-based hour drift.</p>
+                  </details>
+                  <details>
+                    <summary>Can I calculate days until a past date?</summary>
+                    <p>Yes. The tool will show that the selected date was a number of days ago.</p>
+                  </details>
+                  <details>
+                    <summary>Why are months marked as approximate?</summary>
+                    <p>Months have different lengths, so the month value is a practical estimate based on the day count.</p>
+                  </details>
+                </div>
+              </section>
+
+              <section class="content-card">
+                <h2>Related tools</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/business-days-calculator/">
+                    <h3>Business Days Calculator</h3>
+                    <p>Switch to working-day calculations when weekends and holidays should be excluded.</p>
+                  </a>
+                  <a class="related-card" href="/epoch-converter/">
+                    <h3>Epoch Converter</h3>
+                    <p>Convert between calendar dates and Unix timestamps when you need a machine-readable time value.</p>
+                  </a>
+                  <a class="related-card" href="/timestamp-to-date/">
+                    <h3>Timestamp to Date</h3>
+                    <p>Use a simpler one-way converter when you already have a Unix timestamp.</p>
+                  </a>
+                  <a class="related-card" href="/number-generator/">
+                    <h3>Number Generator</h3>
+                    <p>Create sample day offsets or numeric ranges for planning and test data.</p>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Quick note</h2>
+                <p>This page works with plain calendar dates, so it is useful for schedules, deadlines and everyday planning where you care about days rather than timestamps.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

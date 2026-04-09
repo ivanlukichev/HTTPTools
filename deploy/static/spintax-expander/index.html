@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spintax Expander — Generate Text Variations Online</title>
+    <meta name="description" content="Generate text variations from spintax patterns directly in your browser. Expand templates with {option1|option2} or [option1|option2] syntax instantly.">
+    <link rel="canonical" href="https://httptools.net/spintax-expander/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Spintax Expander — Generate Text Variations Online">
+    <meta property="og:description" content="Generate text variations from spintax patterns directly in your browser. Expand templates with {option1|option2} or [option1|option2] syntax instantly.">
+    <meta property="og:url" content="https://httptools.net/spintax-expander/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Spintax Expander — Generate Text Variations Online">
+    <meta name="twitter:description" content="Generate text variations from spintax patterns directly in your browser. Expand templates with {option1|option2} or [option1|option2] syntax instantly.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#tools">Tools</a>
+              <span>/</span>
+              <span>Spintax Expander</span>
+            </nav>
+            <h1>Spintax Expander</h1>
+            <p>Generate text variations from spintax patterns directly in your browser. Useful for testing text templates, creating wording alternatives and expanding structured text options.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card" data-spintax-tool>
+                <div class="form-grid">
+                  <div>
+                    <p class="control-label">Mode</p>
+                    <div class="mode-tabs" role="tablist" aria-label="Spintax generator modes">
+                      <button class="mode-tab" type="button" role="tab" aria-selected="false" data-spintax-mode="one">Generate one variation</button>
+                      <button class="mode-tab" type="button" role="tab" aria-selected="true" data-spintax-mode="multiple">Generate multiple variations</button>
+                      <button class="mode-tab" type="button" role="tab" aria-selected="false" data-spintax-mode="all">Generate all variations</button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label for="spintax-input">Input template</label>
+                    <textarea class="textarea" id="spintax-input" placeholder="Example:
+{Hello|Hi} {world|friend}"></textarea>
+                  </div>
+
+                  <section class="tool-panel" id="spintax-mode-multiple" data-spintax-panel>
+                    <div class="split-grid">
+                      <div>
+                        <label for="spintax-count">Number of variations</label>
+                        <input class="input" id="spintax-count" type="number" min="1" max="5000" step="1" value="10">
+                        <p class="field-hint" id="spintax-count-limit">Maximum generated variations: 5000</p>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="tool-panel" id="spintax-mode-one" data-spintax-panel hidden></section>
+                  <section class="tool-panel" id="spintax-mode-all" data-spintax-panel hidden></section>
+
+                  <div class="checkbox-grid">
+                    <label class="check-option"><input id="spintax-remove-duplicates" type="checkbox" checked> Remove duplicates</label>
+                    <label class="check-option"><input id="spintax-trim-spaces" type="checkbox" checked> Trim extra spaces</label>
+                  </div>
+
+                  <div class="button-row">
+                    <button class="button" id="spintax-generate" type="button">Generate</button>
+                    <button class="button-secondary" id="spintax-copy" type="button">Copy</button>
+                    <button class="button-ghost" id="spintax-clear" type="button">Clear</button>
+                  </div>
+                  <p class="field-hint" id="spintax-estimate">Estimated total combinations: 4</p>
+                </div>
+
+                <label for="spintax-output">Generated variations</label>
+                <textarea class="textarea" id="spintax-output" readonly></textarea>
+                <div class="status-message" id="spintax-status">Choose a mode and expand your template locally in your browser.</div>
+              </section>
+
+              <section class="content-card">
+                <h2>How it works</h2>
+                <p>This tool expands text patterns that contain alternative options inside curly braces or square brackets. Each block such as {fun|colorful|relaxing} puzzle represents a set of choices, and the tool can generate one, many or all possible text variations.</p>
+                <p>All processing happens locally in your browser. No text is uploaded or stored.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>Example 1
+
+Input:
+{Play|Enjoy} {a new|this} puzzle
+
+Possible outputs:
+Play a new puzzle
+Play this puzzle
+Enjoy a new puzzle
+Enjoy this puzzle
+
+Example 2
+
+Input:
+[Beautiful|Colorful|Relaxing] [jigsaw|picture] puzzle
+
+Possible outputs:
+Beautiful jigsaw puzzle
+Colorful picture puzzle
+Relaxing jigsaw puzzle
+
+Example 3
+
+Input:
+{Solve|Try} this {easy|fun|colorful} puzzle today
+
+Possible outputs:
+Solve this easy puzzle today
+Solve this fun puzzle today
+Try this colorful puzzle today</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>What is spintax?</summary>
+                    <p>Spintax is a text pattern format used to create multiple wording variations from one template.</p>
+                  </details>
+                  <details>
+                    <summary>What syntax does this tool support?</summary>
+                    <p>It supports both {option1|option2} and [option1|option2] formats.</p>
+                  </details>
+                  <details>
+                    <summary>Is this tool safe?</summary>
+                    <p>Yes. All processing happens directly in your browser.</p>
+                  </details>
+                  <details>
+                    <summary>Does this tool upload my text?</summary>
+                    <p>No. Nothing is uploaded, stored or logged.</p>
+                  </details>
+                </div>
+              </section>
+
+              <section class="content-card guide-cta">
+                <h2>Learn how this tool is commonly used</h2>
+                <p>Read the practical guide for template variations, wording alternatives and spintax use cases.</p>
+                <div class="button-row">
+                  <a class="button" href="/guides/spintax/">Open guide →</a>
+                </div>
+              </section>
+
+              <section class="content-card">
+                <h2>Related tools</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/word-counter/">
+                    <h3>Word Counter</h3>
+                    <p>Measure generated text length after expanding one or many variations.</p>
+                  </a>
+                  <a class="related-card" href="/case-converter/">
+                    <h3>Case Converter</h3>
+                    <p>Normalize the final case style after generating template variations.</p>
+                  </a>
+                  <a class="related-card" href="/line-sorter/">
+                    <h3>Line Sorter</h3>
+                    <p>Clean, deduplicate and sort generated outputs into a more readable list.</p>
+                  </a>
+                  <a class="related-card" href="/remove-html-tags/">
+                    <h3>Remove HTML Tags</h3>
+                    <p>Clean copied text before turning it into variation templates.</p>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Quick note</h2>
+                <p>Use single mode for one sample, multiple mode for quick batches, and all variations when you need the full set of possible outputs.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

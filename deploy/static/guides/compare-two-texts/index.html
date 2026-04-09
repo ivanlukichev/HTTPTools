@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to Compare Two Texts</title>
+    <meta name="description" content="Learn common ways to compare two texts for editing, code review, content QA and quick change checks.">
+    <link rel="canonical" href="https://httptools.net/guides/compare-two-texts/">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="How to Compare Two Texts">
+    <meta property="og:description" content="Learn common ways to compare two texts for editing, code review, content QA and quick change checks.">
+    <meta property="og:url" content="https://httptools.net/guides/compare-two-texts/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="How to Compare Two Texts">
+    <meta name="twitter:description" content="Learn common ways to compare two texts for editing, code review, content QA and quick change checks.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/" aria-current="page">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/guides/">Guides</a>
+              <span>/</span>
+              <span>How to Compare Two Texts</span>
+            </nav>
+            <h1>How to Compare Two Texts</h1>
+            <p>Text comparison is useful whenever you know something changed but need to see exactly where. That applies to code, product copy, prompts, generated output, documentation and almost any editing workflow where version history is either unavailable or too heavy for the job.</p>
+            <p>A good diff view reduces noise. Instead of rereading two whole blocks from the top, you can focus on added, removed and modified lines, then zoom into the changed words or characters inside those lines.</p>
+            <p>This is especially helpful for quick QA tasks: checking whether a generated answer drifted, reviewing changes in content snippets, or confirming that a refactor only altered the intended lines.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container">
+            <section class="content-card">
+              <h2>When this is useful</h2>
+              <ul class="content-list">
+                <li>Comparing two versions of the same content block during editing.</li>
+                <li>Checking whether a code snippet changed in one place or in several.</li>
+                <li>Reviewing AI-generated text against a source draft.</li>
+                <li>Confirming whether a formatting change also altered wording.</li>
+              </ul>
+            </section>
+
+            <section class="content-card">
+              <h2>Practical example</h2>
+              <p>If one version says <code>Solve this puzzle today</code> and the other says <code>Solve this puzzle tomorrow</code>, the meaningful difference is only the changed ending. A diff viewer shows that immediately, instead of forcing you to scan the full sentence twice.</p>
+              <p>Options like Ignore whitespace or Ignore case are useful when you only care about semantic changes, not formatting cleanup.</p>
+            </section>
+
+            <section class="content-card">
+              <h2>Common use cases</h2>
+              <ul class="content-list">
+                <li>Comparing two versions of UI copy before publishing.</li>
+                <li>Checking machine-generated content against a manually written original.</li>
+                <li>Reviewing config or code snippets without opening a full repo tool.</li>
+                <li>Spotting small wording changes in article intros or metadata.</li>
+                <li>Verifying whether cleanup changed content or only spacing.</li>
+              </ul>
+            </section>
+
+            <section class="content-card guide-cta">
+              <span class="section-label">Try the tool</span>
+              <h2>Compare text in your browser</h2>
+              <p>Use the browser-based tool to apply this in seconds.</p>
+              <div class="button-row">
+                <a class="button" href="/text-diff/">Open Tool →</a>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>FAQ</h2>
+              <div class="faq-list">
+                <details>
+                  <summary>Should I compare line by line or character by character?</summary>
+                  <p>Line-by-line comparison keeps the view readable, and character-level comparison helps inside lines that changed.</p>
+                </details>
+                <details>
+                  <summary>When should I ignore whitespace?</summary>
+                  <p>Use it when spacing changes are expected and you only care about meaningful content differences.</p>
+                </details>
+                <details>
+                  <summary>Is a browser diff enough for code review?</summary>
+                  <p>For short snippets, yes. For large projects, repository tooling is still better, but quick diff pages are useful for focused checks.</p>
+                </details>
+              </div>
+            </section>
+
+            <section class="content-card">
+              <h2>Related tools</h2>
+              <div class="related-grid">
+                <a class="related-card" href="/text-diff/">
+                  <h3>Text Diff</h3>
+                  <p>Compare two texts with line and character highlighting.</p>
+                </a>
+                <a class="related-card" href="/word-counter/">
+                  <h3>Word Counter</h3>
+                  <p>Measure the resulting text after reviewing edits.</p>
+                </a>
+                <a class="related-card" href="/case-converter/">
+                  <h3>Case Converter</h3>
+                  <p>Normalize case before or after comparing content.</p>
+                </a>
+                <a class="related-card" href="/line-sorter/">
+                  <h3>Line Sorter</h3>
+                  <p>Reorder line-based text before comparing list-like changes.</p>
+                </a>
+              </div>
+            </section>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

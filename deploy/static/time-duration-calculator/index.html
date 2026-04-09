@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Time Duration Calculator — Calculate Hours and Minutes Between Times</title>
+    <meta name="description" content="Calculate the duration between two times or dates. Instantly see hours, minutes and total time difference.">
+    <link rel="canonical" href="https://httptools.net/time-duration-calculator/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Time Duration Calculator — Calculate Hours and Minutes Between Times">
+    <meta property="og:description" content="Calculate the duration between two times or dates. Instantly see hours, minutes and total time difference.">
+    <meta property="og:url" content="https://httptools.net/time-duration-calculator/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Time Duration Calculator — Calculate Hours and Minutes Between Times">
+    <meta name="twitter:description" content="Calculate the duration between two times or dates. Instantly see hours, minutes and total time difference.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#tools">Tools</a>
+              <span>/</span>
+              <span>Time Duration Calculator</span>
+            </nav>
+            <h1>Time Duration Calculator</h1>
+            <p>Calculate the duration between two times or dates. Useful for work schedules, planning and tracking time differences.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card" data-time-duration-tool>
+                <div class="form-grid">
+                  <div>
+                    <p class="control-label">Mode</p>
+                    <div class="mode-tabs" role="tablist" aria-label="Time duration modes">
+                      <button class="mode-tab" type="button" role="tab" aria-selected="true" data-time-duration-mode="time">Time only</button>
+                      <button class="mode-tab" type="button" role="tab" aria-selected="false" data-time-duration-mode="datetime">Date + time</button>
+                    </div>
+                  </div>
+
+                  <div data-time-duration-panel="time">
+                    <div class="split-grid">
+                      <div>
+                        <label for="time-duration-start-time">Start time</label>
+                        <input class="input" id="time-duration-start-time" type="time">
+                      </div>
+                      <div>
+                        <label for="time-duration-end-time">End time</label>
+                        <input class="input" id="time-duration-end-time" type="time">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div data-time-duration-panel="datetime" hidden>
+                    <div class="split-grid">
+                      <div>
+                        <label for="time-duration-start-datetime">Start date and time</label>
+                        <input class="input" id="time-duration-start-datetime" type="datetime-local">
+                      </div>
+                      <div>
+                        <label for="time-duration-end-datetime">End date and time</label>
+                        <input class="input" id="time-duration-end-datetime" type="datetime-local">
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <h2>Result</h2>
+                    <pre class="result-panel" id="time-duration-result" data-empty="true">Result will appear here.</pre>
+                    <div class="button-row">
+                      <button class="button-secondary" id="time-duration-copy" type="button">Copy result</button>
+                      <button class="button-ghost" id="time-duration-clear" type="button">Clear</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="status-message" id="time-duration-status">Choose a mode and enter times to calculate the duration locally in your browser.</div>
+              </section>
+
+              <section class="content-card">
+                <h2>How it works</h2>
+                <p>This calculator determines the difference between two timestamps and displays the duration in a human-readable format.</p>
+                <p>All calculations happen locally in your browser.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>Time only
+
+Start:
+09:30
+
+End:
+17:45
+
+Result:
+Duration:
+8 hours 15 minutes
+
+Date + time
+
+Start:
+2026-03-12 09:30
+
+End:
+2026-03-13 12:00
+
+Result:
+1 day 2 hours 30 minutes</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>Can I calculate overnight time spans?</summary>
+                    <p>Yes. In time-only mode, an end time earlier than the start time is treated as the next day.</p>
+                  </details>
+                  <details>
+                    <summary>Can I compare full date and time values?</summary>
+                    <p>Yes. Switch to Date + time mode for multi-day duration calculations.</p>
+                  </details>
+                  <details>
+                    <summary>Is this tool safe?</summary>
+                    <p>Yes. All calculations happen locally in your browser.</p>
+                  </details>
+                </div>
+              </section>
+
+              <section class="content-card">
+                <h2>Related tools</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/date-calculator/">
+                    <h3>Date Calculator</h3>
+                    <p>Use calendar day math when you care about dates more than time intervals.</p>
+                  </a>
+                  <a class="related-card" href="/business-days-calculator/">
+                    <h3>Business Days Calculator</h3>
+                    <p>Switch to workday rules when weekends and holidays matter.</p>
+                  </a>
+                  <a class="related-card" href="/epoch-converter/">
+                    <h3>Epoch Converter</h3>
+                    <p>Convert timestamps while debugging duration-related data.</p>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Quick note</h2>
+                <p>In time-only mode, an end time earlier than the start time is treated as the next day so overnight schedules still work.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

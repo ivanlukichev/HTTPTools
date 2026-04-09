@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UUID Generator — Generate UUID v4 Online</title>
+    <meta name="description" content="Generate random UUID v4 identifiers instantly in your browser with this free UUID generator.">
+    <link rel="canonical" href="https://httptools.net/uuid-generator/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="UUID Generator — Generate UUID v4 Online">
+    <meta property="og:description" content="Generate random UUID v4 identifiers instantly in your browser with this free UUID generator.">
+    <meta property="og:url" content="https://httptools.net/uuid-generator/">
+    <meta property="og:site_name" content="HTTPTools">
+    <meta property="og:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <meta property="og:image:alt" content="HTTPTools social preview">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="UUID Generator — Generate UUID v4 Online">
+    <meta name="twitter:description" content="Generate random UUID v4 identifiers instantly in your browser with this free UUID generator.">
+    <meta name="twitter:image" content="https://httptools.net/assets/img/og-preview.svg">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="/assets/css/styles.css?v=20260312r">
+    <script src="/assets/js/site.js?v=20260312r" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container site-header__inner">
+          <a class="brand" href="/" aria-label="HTTPTools home">
+            <span class="brand__mark">HT</span>
+            <span>HTTPTools</span>
+          </a>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+          <nav class="site-nav" id="site-nav" aria-label="Primary" data-nav>
+            <a href="/#tools" aria-current="page">Tools</a>
+            <a href="/http-status-codes/">Reference</a>
+            <a href="/guides/">Guides</a>
+            <a href="/#about">About</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container">
+            <nav class="breadcrumbs" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              <span>/</span>
+              <a href="/#tools">Tools</a>
+              <span>/</span>
+              <span>UUID Generator</span>
+            </nav>
+            <h1>UUID Generator</h1>
+            <p>Generate random UUID v4 identifiers for mock payloads, test fixtures and sample records.</p>
+            <p class="lede">Create one or several identifiers at once whenever you need a quick set of unique-looking IDs.</p>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="container layout-grid">
+            <div>
+              <section class="content-card" data-status-scope data-uuid-tool>
+                <div class="form-grid">
+                  <div>
+                    <label for="uuid-count">How many UUIDs</label>
+                    <select class="select" id="uuid-count">
+                      <option value="1">1 UUID</option>
+                      <option value="5">5 UUIDs</option>
+                      <option value="10">10 UUIDs</option>
+                    </select>
+                  </div>
+                  <div class="button-row">
+                    <button class="button" id="uuid-generate" type="button">Generate</button>
+                    <button class="button-secondary" id="uuid-copy" type="button">Copy</button>
+                    <button class="button-ghost" id="uuid-clear" type="button">Clear</button>
+                  </div>
+                </div>
+                <h2>Result</h2>
+                <pre class="result-panel" id="uuid-result" data-empty="true">Generated UUIDs will appear here.</pre>
+                <div class="status-message" id="uuid-status">Choose how many UUIDs you want, then press Generate.</div>
+              </section>
+
+              <section class="content-card">
+                <h2>What is UUID v4?</h2>
+                <p>UUID v4 is a randomly generated 128-bit identifier written as hexadecimal segments. It is commonly used when you need globally unique IDs without coordinating with a central server.</p>
+              </section>
+
+              <section class="content-card">
+                <h2>Examples</h2>
+                <div class="code-block"><pre>7d36d95f-765e-4f2b-a9d9-0cb41e4ea0cb</pre></div>
+              </section>
+
+              <section class="content-card">
+                <h2>FAQ</h2>
+                <div class="faq-list">
+                  <details>
+                    <summary>Is UUID v4 cryptographically secure?</summary>
+                    <p>In modern browsers, <code>crypto.randomUUID()</code> relies on a cryptographically secure source of randomness.</p>
+                  </details>
+                  <details>
+                    <summary>Can I generate multiple UUIDs at once?</summary>
+                    <p>Yes. The selector lets you create 1, 5 or 10 UUIDs in one click.</p>
+                  </details>
+                  <details>
+                    <summary>Do UUIDs guarantee uniqueness?</summary>
+                    <p>They do not offer a mathematical absolute guarantee, but collisions are extremely unlikely for practical use.</p>
+                  </details>
+                </div>
+              </section>
+
+              <section class="content-card guide-cta">
+                <h2>Learn how this tool is commonly used</h2>
+                <p>Read the practical guide for UUID usage in APIs, databases, queues and test data.</p>
+                <div class="button-row">
+                  <a class="button" href="/guides/uuid-generator/">Open guide →</a>
+                </div>
+              </section>
+
+              <section class="content-card">
+                <h2>Related tools</h2>
+                <div class="related-grid">
+                  <a class="related-card" href="/password-generator/">
+                    <h3>Password Generator</h3>
+                    <p>Generate secure passwords and PIN codes alongside random identifiers.</p>
+                  </a>
+                  <a class="related-card" href="/json-formatter/">
+                    <h3>JSON Formatter</h3>
+                    <p>Drop generated IDs into payloads and format them cleanly.</p>
+                  </a>
+                  <a class="related-card" href="/epoch-converter/">
+                    <h3>Epoch Converter</h3>
+                    <p>Pair IDs with timestamps when building sample events and logs.</p>
+                  </a>
+                  <a class="related-card" href="/timestamp-to-date/">
+                    <h3>Timestamp to Date</h3>
+                    <p>Check readable times alongside generated identifiers.</p>
+                  </a>
+                </div>
+              </section>
+            </div>
+
+            <aside>
+              <section class="status-card">
+                <h2>Quick note</h2>
+                <p>Generate one value for a fast copy or several at once for sample data sets.</p>
+              </section>
+            </aside>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container site-footer__inner">
+          <div class="footer-copy">
+            <a class="brand" href="/">
+              <span class="brand__mark">HT</span>
+              <span>HTTPTools</span>
+            </a>
+            <p>Safe, fast, browser-based tools for developers and web tasks.</p>
+            <p class="muted">© 2026 HTTPTools</p>
+            <p class="site-footer__credit">by <a href="https://lukichev.biz/" rel="me">lukichev.biz</a></p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <h2>Site</h2>
+              <a href="/">Home</a>
+              <a href="/#tools">Tools</a>
+              <a href="/guides/">Guides</a>
+              <a href="/#about">About</a>
+            </div>
+            <div>
+              <h2>Reference</h2>
+              <a href="/http-status-codes/">HTTP Status Codes</a>
+              <a href="/ascii-table/">ASCII Table</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

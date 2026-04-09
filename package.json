@@ -1,0 +1,15 @@
+{
+  "name": "httptools-net",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HTTPTools site deployed from the /deploy directory with Cloudflare Workers Assets.",
+  "scripts": {
+    "build:deploy": "node scripts/build-deploy.mjs",
+    "dev": "npm run build:deploy && wrangler dev",
+    "deploy": "npm run build:deploy && wrangler deploy",
+    "check": "npm run build:deploy && wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.20.0"
+  }
+}
